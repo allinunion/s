@@ -459,30 +459,12 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ink-2);
-    max-width: 220px;
+    max-width: 200px;
     line-height: 1.4;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 10px;
-    transition: color 0.25s ease;
   }
   .contact-band-title em {
     font-style: normal;
     color: var(--blue-3);
-    transition: color 0.25s ease;
-  }
-  .contact-band-title svg {
-    color: var(--ink-dim);
-    flex-shrink: 0;
-    margin-top: 2px;
-    transition: all 0.25s ease;
-  }
-  .contact-band-title:hover { color: var(--ink); }
-  .contact-band-title:hover em { color: var(--blue); }
-  .contact-band-title:hover svg {
-    color: var(--blue-3);
-    transform: translate(2px, -2px);
   }
 
   .socials {
@@ -703,12 +685,9 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
 
     <!-- ───── CONTACT BAND ───── -->
     <div class="contact-band" id="contact">
-      <a class="contact-band-title" href="https://www.allinunion.com" target="_blank" rel="noopener">
+      <div class="contact-band-title">
         Talk to us<br><em>on your channel</em>
-        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 9l6-6M5 3h4v4"/>
-        </svg>
-      </a>
+      </div>
       <div class="contact-divider"></div>
       <div class="socials">
         <a href="https://t.me/AllInZone_Support" class="social" target="_blank" rel="noopener"
@@ -725,6 +704,11 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
            onclick="fbq('track','Lead',{content_name:'Instagram',source:'contact_band'});">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           <span>Instagram</span>
+        </a>
+        <a href="https://www.allinunion.com" class="social social-website" target="_blank" rel="noopener"
+           onclick="fbq('track','Lead',{content_name:'Website',source:'contact_band'});">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span>Website</span>
         </a>
       </div>
     </div>
