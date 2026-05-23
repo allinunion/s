@@ -11,6 +11,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1596345781609399');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
   :root {
     --bg:        #0a0a0b;
@@ -436,7 +454,8 @@
     </p>
 
     <div class="cta-row">
-      <a href="https://t.me/AllInZone_Support" class="btn btn-primary" target="_blank" rel="noopener">
+      <a href="https://t.me/AllInZone_Support" class="btn btn-primary" target="_blank" rel="noopener"
+         onclick="fbq('track','Lead',{content_name:'Connect Your Club',source:'hero_cta'});">
         <span>Connect Your Club</span>
         <svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M1 6h15M11 1l5 5-5 5"/>
@@ -469,15 +488,18 @@
       </div>
       <div class="contact-divider"></div>
       <div class="socials">
-        <a href="https://t.me/AllInZone_Support" class="social" target="_blank" rel="noopener">
+        <a href="https://t.me/AllInZone_Support" class="social" target="_blank" rel="noopener"
+           onclick="fbq('track','Lead',{content_name:'Telegram',source:'contact_band'});">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.6 8.2-1.9 8.8c-.1.6-.5.8-1.1.5l-3-2.2-1.5 1.4c-.2.2-.3.3-.6.3l.2-3 5.5-5c.2-.2 0-.3-.3-.1l-6.8 4.3-2.9-.9c-.6-.2-.6-.6.1-.9l11.5-4.4c.5-.2 1 .1.8.7z"/></svg>
           <span>Telegram</span>
         </a>
-        <a href="https://wa.me/37360273748" class="social" target="_blank" rel="noopener">
+        <a href="https://wa.me/37360273748" class="social" target="_blank" rel="noopener"
+           onclick="fbq('track','Lead',{content_name:'WhatsApp',source:'contact_band'});">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.6 1.1 2.8.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3zM12 .5C5.7.5.5 5.7.5 12c0 2.1.5 4.1 1.5 5.8L.6 23.5l5.8-1.5c1.7.9 3.6 1.4 5.6 1.4 6.3 0 11.5-5.2 11.5-11.5S18.3.5 12 .5zm0 21c-1.8 0-3.5-.5-5-1.3l-.4-.2-3.7 1 1-3.6-.2-.4c-.9-1.5-1.4-3.2-1.4-5 0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.2 9.5-9.3 9.5z"/></svg>
           <span>WhatsApp</span>
         </a>
-        <a href="https://www.instagram.com/clubgg_allinzone?igsh=aDBscGZ0emR0eDRz&utm_source=qr" class="social" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/clubgg_allinzone?igsh=aDBscGZ0emR0eDRz&utm_source=qr" class="social" target="_blank" rel="noopener"
+           onclick="fbq('track','Lead',{content_name:'Instagram',source:'contact_band'});">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           <span>Instagram</span>
         </a>
