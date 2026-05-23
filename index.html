@@ -155,6 +155,31 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     vertical-align: middle;
     animation: pulse 2s ease-in-out infinite;
   }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    background: transparent;
+  }
+  .header-cta svg { color: var(--ink-3); transition: all 0.25s ease; }
+  .header-cta:hover {
+    border-color: var(--blue);
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--ink);
+  }
+  .header-cta:hover svg { color: var(--blue-3); transform: translate(2px, -2px); }
   @keyframes pulse {
     0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
     50%      { opacity: 0.5; box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
@@ -293,6 +318,125 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     color: var(--ink-dim);
   }
 
+  /* ───── ABOUT ───── */
+  .about {
+    margin-top: 80px;
+    padding-top: 56px;
+    border-top: 1px solid var(--line);
+    opacity: 0;
+    animation: rise 0.8s 0.7s forwards;
+  }
+
+  .about-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .about-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue-3);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .about-eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--blue);
+  }
+
+  .about-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    color: var(--ink);
+    max-width: 580px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 32px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .about-card:hover {
+    border-color: var(--line-2);
+    background: var(--surface-2);
+    transform: translateY(-2px);
+  }
+  .about-card:hover::before { opacity: 1; }
+
+  .about-card-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    display: grid;
+    place-items: center;
+    color: var(--blue-3);
+    background: var(--bg-2);
+  }
+  .about-card-icon svg { width: 22px; height: 22px; }
+
+  .about-card-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--ink-dim);
+    margin-bottom: -8px;
+  }
+
+  .about-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .about-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-3);
+  }
+
   /* ───── CONTACT BAND ───── */
   .contact-band {
     margin-top: 56px;
@@ -315,12 +459,30 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ink-2);
-    max-width: 200px;
+    max-width: 220px;
     line-height: 1.4;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: color 0.25s ease;
   }
   .contact-band-title em {
     font-style: normal;
     color: var(--blue-3);
+    transition: color 0.25s ease;
+  }
+  .contact-band-title svg {
+    color: var(--ink-dim);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all 0.25s ease;
+  }
+  .contact-band-title:hover { color: var(--ink); }
+  .contact-band-title:hover em { color: var(--blue); }
+  .contact-band-title:hover svg {
+    color: var(--blue-3);
+    transform: translate(2px, -2px);
   }
 
   .socials {
@@ -389,7 +551,8 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
   @media (max-width: 900px) {
     .wrap { padding: 24px 28px 32px; }
     .hero { padding: 56px 0 48px; }
-    .header-meta { display: none; }
+    .header-meta span { display: none; }
+    .header-cta { padding: 8px 14px; font-size: 11px; }
     .contact-band {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -400,6 +563,8 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     .socials { justify-content: center; }
     .stats { gap: 40px; flex-wrap: wrap; }
     footer { flex-direction: column; gap: 8px; text-align: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-head { flex-direction: column; align-items: flex-start; gap: 12px; }
   }
   @media (max-width: 560px) {
     .wrap { padding: 20px 20px 28px; }
@@ -409,6 +574,8 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     .stats { gap: 28px; }
     .stat .num { font-size: 28px; }
     .social { flex: 1 1 100%; justify-content: center; }
+    .about { margin-top: 56px; padding-top: 40px; }
+    .about-card { padding: 24px 22px; }
   }
 </style>
 </head>
@@ -436,6 +603,12 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
     <div class="header-meta">
       <span><i class="dot"></i>International Network</span>
       <span>24 / 7 Action</span>
+      <a class="header-cta" href="https://www.allinunion.com" target="_blank" rel="noopener">
+        <span>Full site</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 9l6-6M5 3h4v4"/>
+        </svg>
+      </a>
     </div>
   </header>
 
@@ -481,11 +654,61 @@ src="https://www.facebook.com/tr?id=1596345781609399&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <!-- ───── ABOUT ───── -->
+    <div class="about" id="about">
+      <div class="about-head">
+        <div>
+          <div class="about-eyebrow">About the Union</div>
+          <h2 class="about-title">Built for clubs that want to grow without giving anything up.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="about-card-num">01 · Safety</div>
+          <h3>Safe environment</h3>
+          <p>Vetted clubs only, anti-bot and anti-collusion controls, transparent settlement. The Union is a closed circuit — every operator is verified before they're in.</p>
+        </article>
+
+        <article class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h4l3-8 4 16 3-8h4"/>
+            </svg>
+          </div>
+          <div class="about-card-num">02 · Traffic</div>
+          <h3>Real shared traffic</h3>
+          <p>Plug into a network of independent clubs across multiple regions. Shared tables and round-the-clock action mean your players always find a seat — even when your own pool is thin.</p>
+        </article>
+
+        <article class="about-card">
+          <div class="about-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/>
+            </svg>
+          </div>
+          <div class="about-card-num">03 · Control</div>
+          <h3>You stay in charge</h3>
+          <p>Your brand, your players, your rake structure — fully yours. The Union connects you to scale, never to dilute. No takeovers, no rebranding, no hidden fees.</p>
+        </article>
+      </div>
+    </div>
+
     <!-- ───── CONTACT BAND ───── -->
     <div class="contact-band" id="contact">
-      <div class="contact-band-title">
+      <a class="contact-band-title" href="https://www.allinunion.com" target="_blank" rel="noopener">
         Talk to us<br><em>on your channel</em>
-      </div>
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 9l6-6M5 3h4v4"/>
+        </svg>
+      </a>
       <div class="contact-divider"></div>
       <div class="socials">
         <a href="https://t.me/AllInZone_Support" class="social" target="_blank" rel="noopener"
